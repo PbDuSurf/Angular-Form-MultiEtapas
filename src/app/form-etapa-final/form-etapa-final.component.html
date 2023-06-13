@@ -1,0 +1,148 @@
+<legend class="text-center fw-bold" *ngIf="this.formFinal.valid"> {{etapa}} </legend>
+
+<div [formGroup]="formFinal" *ngIf="this.formFinal.valid">
+
+<div formGroupName="etapaUm">
+    <div class="mb-3">
+      <label for="nome" class="form-label fw-bold"> Nome </label>
+      <input type="text" class="form-control" id="nome" name="nome" formControlName="nome" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="sobrenome" class="form-label fw-bold"> Sobrenome </label>
+        <input type="text" class="form-control" id="sobrenome" name="sobrenome" formControlName="sobrenome" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="cpf" class="form-label fw-bold"> CPF </label>
+        <input type="text" class="form-control" id="cpf" name="cpf" formControlName="cpf" readonly>
+    </div>
+
+    <div class="form-group">
+        <h5 class="fw-bold"> Gênero </h5>
+         <div class="form-check">
+               <input class="form-check-input" type="radio" name="genero" id="masculino" value="m" formControlName="genero" readonly>
+               <label class="form-check-label" for="masculino">Masculino</label>
+          </div>
+          <div class="form-check">
+             <input class="form-check-input" type="radio" name="genero" id="feminino" value="f" formControlName="genero" readonly>
+             <label class="form-check-label" for="feminino">Feminino</label>
+           </div>
+     </div>
+     
+    
+    <div class="mb-3">
+        <label for="dataNascimento" class="form-label fw-bold">Nascimento</label>
+        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" formControlName="dataNascimento" readonly>
+  
+    </div>
+   
+
+    <div class="mb-3">
+        <label for="email" class="form-label fw-bold">Email</label>
+        <input type="text" class="form-control" id="email" name="email" formControlName="email" readonly>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="senha" class="form-label fw-bold">Senha</label>
+        <input type="password" class="form-control" id="senha" name="senha" formControlName="senha" readonly>
+    </div>
+    
+</div>
+
+
+
+<div formGroupName="etapaDois">
+    <div class="mb-3">
+        <label for="rua" class="form-label fw-bold">Rua</label>
+        <input type="text" class="form-control" id="rua" name="rua" formControlName="rua" readonly>
+    
+    </div>
+    
+    <div class="row form-group">
+    
+        <div class="mb-3 col-md-3">
+          <label for="numero" class="form-label fw-bold">Número</label>
+          <input type="number" class="form-control" id="rua" name="numero" formControlName="numero" readonly>
+      
+        </div>
+      
+      
+        <div class="mb-3 col-md-3">
+          <label for="complemento" class="form-label fw-bold">Complemento</label>
+          <input type="text" class="form-control" id="complemento" name="complemento" formControlName="complemento" readonly>
+      
+        </div>
+      
+      
+        <div class="mb-3 col-md-6">
+          <label for="cep" class="form-label fw-bold">CEP</label>
+          <input type="text" class="form-control" id="cep" name="cep" formControlName="cep" readonly>
+      
+        </div>
+    </div>
+    
+
+    <div class="row form-group">
+    
+        <div class="mb-3 col-md-5">
+          <label for="bairro" class="form-label fw-bold">Bairro</label>
+          <input type="text" class="form-control" id="bairro" name="bairro" formControlName="bairro" readonly>
+      
+        
+        </div>
+    
+        <div class="mb-3 col-md-5">
+          <label for="cidade" class="form-label fw-bold">Cidade</label>
+          <input type="text" class="form-control" id="cidade" name="cidade" formControlName="cidade" readonly>
+      
+          
+        </div>
+    
+        <div class="mb-3 col-md-2">
+          <label for="uf" class="form-label fw-bold">UF</label>
+          <input type="text" class="form-control" id="uf" name="uf" formControlName="uf" readonly>
+      
+        </div>
+    
+    </div>
+
+</div>
+
+<div formGroupName="etapaTres">
+    <div class="row">
+        <div class="mb-3 col-md-8">
+          <label for="curso" class="form-label fw-bold">Curso</label>
+          <input type="text" class="form-control" id="curso" name="curso" formControlName="curso" readonly>
+      
+        </div>
+      
+      
+        <div class="mb-3 col-md-4">
+          <label for="nivel" class="form-label fw-bold">Nível</label>
+          <input type="text" class="form-control" id="nivel" name="nivel" formControlName="nivel" readonly>
+    
+        </div>
+
+      </div>
+    
+    
+      <div class="row">
+        
+        <div class="mb-3 col-md-8">
+          <label for="profissao" class="form-label fw-bold">Profissão</label>
+          <input type="text" class="form-control" id="profissao" name="profissao" formControlName="profissao" readonly>
+    
+        </div>
+      
+        <div class="mb-3 col-md-4">
+          <label for="tempoExperiencia" class="form-label fw-bold">Tempo de experiência</label>
+          <input type="number" class="form-control" id="tempoExperiencia" name="tempoExperiencia" formControlName="tempoExperiencia" readonly>
+    
+        </div>
+    
+      </div>
+</div>
+
+</div>

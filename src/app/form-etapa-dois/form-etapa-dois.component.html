@@ -1,0 +1,110 @@
+<legend class="text-center fw-bold"> {{etapa}} </legend>
+  
+<div [formGroup]="formDois">
+
+  <div class="mb-3">
+    <label for="rua" class="form-label fw-bold">Rua</label>
+    <input type="text" class="form-control" id="rua" name="rua" formControlName="rua">
+   
+    <p class="text-danger fw-bold bg-danger-subtle border border-danger-subtle  rounded-3 mt-1 p-1" *ngIf="(formDois.get('rua')?.errors?.['required'] ||  
+formDois.get('rua')?.errors?.['minlength']  || formDois.get('rua')?.errors?.['maxlength']) &&  formDois.get('rua')?.touched">
+      
+       Informe a rua!
+    
+   </p>
+  </div>
+  <div class="row form-group">
+    <div class="mb-3 col-md-3">
+      <label for="numero" class="form-label fw-bold">Número</label> <input type="number" class="form-control" id="rua"
+        name="numero" formControlName="numero">
+
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1" *ngIf="(formDois.get('numero')?.errors?.['required'] ||  formDois.get('numero')?.errors?.['min']) &&  
+formDois.get('numero')?.touched">
+        
+       Informe o número da residência!
+
+      </p>
+    </div>
+
+
+    <div class="mb-3 col-md-3">
+      <label for="complemento" class="form-label fw-bold">Complemento</label> <input type="text" class="form-control"
+        id="complemento" name="complemento" formControlName="complemento">
+
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1" *ngIf="(formDois.get('complemento')?.errors?.['required'] ||  formDois.get('complemento')?.errors?.['minlength']  
+ || formDois.get('complemento')?.errors?.['maxlength']) &&  formDois.get('complemento')?.touched">
+        
+     Informe o complemento!
+      
+     </p>
+    </div>
+
+
+    <div class="mb-3 col-md-6">
+      <label for="cep" class="form-label fw-bold">CEP</label> <input type="text" class="form-control" id="cep"
+        name="cep" formControlName="cep">
+
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1" *ngIf="(formDois.get('cep')?.errors?.['required'] ||  
+      formDois.get('cep')?.errors?.['minlength'] || formDois.get('cep')?.errors?.['maxlength']) &&  formDois.get('cep')?.touched">
+       
+      Informe o CEP corretamente!
+
+      </p>
+
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1"
+        *ngIf="(formDois.get('cep')?.errors?.['cepInvalido']) &&  formDois.get('cep')?.touched">
+        
+        CEP inválido!
+
+      </p>
+
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="mb-3 col-md-5">
+      <label for="bairro" class="form-label fw-bold">Bairro</label> <input type="text" class="form-control" id="bairro"
+        name="bairro" formControlName="bairro">
+
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1" *ngIf="(formDois.get('bairro')?.errors?.['required'] ||  formDois.get('bairro')?.errors?.['minlength']  
+ || formDois.get('bairro')?.errors?.['maxlength']) &&  formDois.get('bairro')?.touched">
+        
+        Informe o bairro!
+
+      </p>
+    </div>
+
+    <div class="mb-3 col-md-5">
+      <label for="cidade" class="form-label fw-bold">Cidade</label> <input type="text" class="form-control" id="cidade"
+        name="cidade" formControlName="cidade">
+
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1" *ngIf="(formDois.get('cidade')?.errors?.['required'] ||  formDois.get('cidade')?.errors?.['minlength']  
+ || formDois.get('cidade')?.errors?.['maxlength']) &&  formDois.get('cidade')?.touched">
+        
+        Informe a cidade!
+
+      </p>
+    </div>
+
+    <div class="mb-3 col-md-2">
+      <label for="uf" class="form-label fw-bold">UF</label>
+      <input type="text" class="form-control" id="uf" name="uf" formControlName="uf">
+
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1" *ngIf="(formDois.get('uf')?.errors?.['required'] ||  formDois.get('uf')?.errors?.['minlength']  
+ || formDois.get('uf')?.errors?.['maxlength']) &&  formDois.get('uf')?.touched">
+        
+       Informe a UF!
+
+      </p>
+    </div>
+  </div>
+
+
+  <div class="d-flex justify-content-between">
+    <button [routerLink]="['/etapa-01']" type="button" class="btn btn-primary"> Voltar
+    </button>
+
+    <button [routerLink]="['/etapa-03']" type="button" class="btn btn-primary"> Próximo
+    </button>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<legend class="text-center fw-bold"> {{etapa}} </legend>
+<div [formGroup]="formTres">
+  <div class="row">
+    <div class="mb-3 col-md-8">
+     
+      <label for="curso" class="form-label fw-bold">Curso</label> <input type="text" class="form-control" id="curso"
+        name="curso" formControlName="curso">
+
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1" *ngIf="(formTres.get('curso')?.errors?.['required'] ||  formTres.get('curso')?.errors?.['minlength']  
+  || formTres.get('curso')?.errors?.['maxlength']) &&  formTres.get('curso')?.touched">
+        
+       Informe o curso!
+      
+      </p>
+    </div>
+
+
+    <div class="mb-3 col-md-4">
+      <label for="nivel" class="form-label fw-bold">Nível</label>
+     
+      <select class="form-select" id="nivel" name="nivel" formControlName="nivel">
+        <option ngValue="graduação"> Graduação </option>
+        <option ngValue="especialização"> Especialização </option>
+        <option ngValue="mestrado"> Mestrado </option>
+        <option ngValue="doutorado"> Doutorado </option>
+      </select>
+      
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1"
+        *ngIf="(formTres.get('nivel')?.errors?.['required']) &&  formTres.get('nivel')?.touched">
+        
+        Selecione o nível!
+    
+      </p>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="mb-3 col-md-8">
+      <label for="profissao" class="form-label fw-bold">Profissão</label> 
+
+      <input type="text" class="form-control"id="profissao" name="profissao" formControlName="profissao">
+      
+      <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1" *ngIf="(formTres.get('profissao')?.errors?.['required'] ||  formTres.get('profissao')?.errors?.['minlength']  
+  || formTres.get('profissao')?.errors?.['maxlength']) &&  formTres.get('profissao')?.touched">
+        
+      Informe a profissão!
+
+      </p>
+    </div>
+
+    <div class="mb-3 col-md-4">
+      <label for="tempoExperiencia" class="form-label fw-bold">Tempo de experiência</label>
+      
+      <input type="number" class="form-control" id="tempoExperiencia" name="tempoExperiencia"
+        formControlName="tempoExperiencia">
+      
+        <p class="text-danger fw-bold bg-danger-subtle border border-danger subtle rounded-3 mt-1 p-1"
+        *ngIf="(formTres.get('tempoExperiencia')?.errors?.['required'] ||  formTres.get('tempoExperiencia')?.errors?.['min']) &&  formTres.get('tempoExperiencia')?.touched">
+        
+        Digite o tempo de experiência!
+
+      </p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between">
+
+    <button [routerLink]="['/etapa-02']" type="button" class="btn btn-primary"> Voltar
+    </button>
+
+    <button [routerLink]="['/final']" type="button" class="btn btn-primary"> Finalizar
+    </button>
+
+  </div>
+</div>
